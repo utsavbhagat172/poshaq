@@ -1,0 +1,84 @@
+<div class="pageBody">
+
+	<ul class="nav nav-pills nav-justified">
+		<li class="nav-item">
+			<a class="nav-link active" data-toggle="pill" data-target="#topwear" href="#" role="pill">Topwear</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" data-toggle="pill" data-target="#bottomwear" href="#" role="pill">Bottomwear</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" data-toggle="pill" data-target="#footwear" href="#" role="pill">Footwear</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" data-toggle="pill" data-target="#accessories" href="#" role="pill">Accessories</a>
+		</li>
+	</ul>
+
+	<br>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-2" style="border-right: 1px solid #c8c8c8;">
+				<div class="box">
+					<h6 class="sectionHeading"><b>FILTERS</b></h6><br>
+					<br>
+					<h6>Color</h6>
+
+					<div class="row" ng-repeat="color in main.colorfilters">
+						<div class="checkbox checkbox-default">
+							<input id="checkbox{{color}}" class="styled" type="checkbox" ng-model="color.on" ng-change="checkColorChange()">
+							<label for="checkbox{{color}}">
+								{{color}}
+							</label>
+						</div>
+					</div>
+
+					<br>
+				</div>
+			</div>
+
+			<div class="col-sm-10">
+				<div class="tab-content">
+					<div class="tab-pane show active" id="topwear" role="pillpanel">
+
+						<div class="card-deck">
+							<div class="card col-sm-4" ng-repeat="topwear in main.topwears">
+								<img class="card-img-top" src="{{topwear.imgURL}}" alt="Card image cap">
+								<div class="card-block">
+									<h4 class="card-title"><a href="/topwear/{{topwear.name}}">{{topwear.name}}</a></h4>
+									<p class="card-text">{{topwear.brand}}</p>
+									<p class="card-text"><small class="text-muted">{{topwear.price}}</small></p>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="tab-pane fade" id="bottomwear" role="pillpanel">
+
+						2
+
+					</div>
+					<div class="tab-pane fade" id="footwear" role="pillpanel">
+
+						3
+
+					</div>
+					<div class="tab-pane fade" id="accessories" role="pillpanel">
+
+						4
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<style>
+	.pageBody{
+		padding: 2%;
+		background: #fafafa;
+	}
+</style>

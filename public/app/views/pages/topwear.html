@@ -1,0 +1,22 @@
+<div class="pageBody" ng-controller="TopwearController as topCtrl">
+	<div class="product">
+		{{topCtrl.topwear}}
+	</div>
+	<br><br><br>
+	possible outfits
+	<br><br>
+	<div ng-repeat="outfit in topCtrl.outfits">
+		{{outfit}}
+	</div>
+</div>
+
+
+
+
+
+<style>
+	.pageBody{
+		padding: 2%;
+		background-color: #fafafa;
+	}
+</style>
